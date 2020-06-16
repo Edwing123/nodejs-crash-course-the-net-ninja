@@ -38,7 +38,7 @@ fs.readFile("./assets/poem.txt", (err, poem) => {
  * creation, etc. Also this can be when doing http request. The thing is that reading
  * from a file can take time, thus our code will be waiting to be executed until the
  * file reading finishes, that's what it's called blocking i/o, an operation that blocks
- * out program execution.
+ * our program execution.
  *
  * The good thing is that NodeJS gives us a way to do i/o operations a in "asynchronous way",
  * and this is done through it's callback based approach. So that's why we did that above in the
@@ -59,7 +59,7 @@ fs.writeFile("./assets/my-song.txt", "Hello Darkness my friend", (err) => {
 
 /**
  * All these methods use a callback, but also there's a synchronous version of them,
- * meaning we don't need callbacks, well with the price of making out code wait until
+ * meaning we don't need callbacks, well with the price of making our code wait until
  * the operation finishes.
  */
 

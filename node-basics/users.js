@@ -29,7 +29,7 @@ function getUserById(id) {
 /**
  * module.exports
  * 
- * module is a variable available into this file
+ * module is a global available into this file
  */
 
 // whatever we export is what we will be getting when importing
