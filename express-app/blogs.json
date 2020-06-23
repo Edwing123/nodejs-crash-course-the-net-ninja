@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Learning NodeJS",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning expressJS",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning JavaScript",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning VueJS",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning ReactJS",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning Lua",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning Python",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning Sass",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "Learning Responsive Web Desgin",
+    "snippet": "This is my cool blog"
+  },
+  {
+    "title": "A little bit about me and my journey in the world of web development",
+    "snippet": "This is my cool blog"
+  }
+]

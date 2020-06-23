@@ -7,44 +7,46 @@ const log = console.log.bind(console)
  */
 
 const express = require("express")
+const blogs = require("./blogs.json")
 
 // create express App (instance)
 const app = express()
 
-// handlers for requests (routing)
-app.get("/", (req, res) => {
-  // res.write()
-  // res.end()
-  res.sendFile("./views/index.html", {
-    root: __dirname
-  })
+// register view engine
+app.set("view engine", "ejs")
+// app.set("views", "./views")
 
-  // infers content-type and status-code for us
-  // res.send("<h1>Hello World</h1>")
-})
-
-app.get("/about", (req, res) => {
-  // res.send("<h1>About page</h1>")
-  res.sendFile("./views/about.html", {
-    root: __dirname
+// handlers for requests (routing system)
+app.get("/", (_, res) => {
+  res.render("index", {
+    title: "Home",
+    blogs: blogs,
+    year: new Date().getFullYear(),
+    activeLink: "home"
   })
 })
 
-app.get("/about-me", (req, res) => {
-  res.redirect("/about")
+app.get("/about", (_, res) => {
+  res.render("about", {
+    title: "About",
+    year: new Date().getFullYear(),
+    activeLink: "about"
+  })
 })
 
-// app.get("*", (req, res) => {
-//   res.sendFile("./views/404.html", {
-//     root: __dirname
-//   })
-// })
+app.get("/blogs/creator", (_, res) => {
+  res.render("blog-creator", {
+    title: "Creator",
+    year: new Date().getFullYear(),
+    activeLink: "blog-creator"
+  })
+})
 
-app.use((req, res) => {
-  // res.statusCode = 404
-  // res.status(404)
-  res.status(404).sendFile("./views/404.html", {
-    root: __dirname
+app.use((_, res) => {
+  res.status(404).render("404", {
+    title: "Not found",
+    year: new Date().getFullYear(),
+    activeLink: ""
   })
 })
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %>
+  <body>
+    <div class="container">
+      <%- include("partials/header") %>
+
+      <main class="main">
+        <section class="section">
+          <h2>Create a blog</h2>
+          <div class="blog-editor">
+
+            <form class="blog-form">
+              <label class="form-label" for="title">
+                Title
+                <input type="text" id="title" required
+              /></label>
+              <label class="form-label" for="snippet">
+                Snippet
+                <input type="text" id="snipper" required
+              /></label>
+              <label class="form-label" for="body">
+                Body
+                <textarea id="body" required></textarea>
+              </label>
+              <input type="submit" class="form-button" value="create" />
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %> 
+  <body>
+    <div class="container">
+      <%- include("partials/header") %> 
+
+      <main class="main">
+        <section class="section">
+          <h2>All blogs</h2>
+          <div class="blogs">
+            <!-- hanlding blogs displaying :D -->
+            <% if (blogs.length === 0) { %>
+              <div class="alert alert-warning">No blogs yet</div>
+            <% }  else { %>
+              <% blogs.forEach((blog) => { %>
+                <%- include("partials/blog-card", { blog: blog }) %> 
+              <% }) %>
+            <% } %>
+            <!-- end -->
+
+          </div>
+          </section>
+      </main>
+
+      <%- include("partials/footer") %>
+    </div>
+  </body>
+</html>

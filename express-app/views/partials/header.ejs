@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="brand-logo">
+    <a href="/">Edwing123 Blog</a>
+  </div>
+
+  <%
+  const links = [
+    {
+      name: "home",
+      url: "/",
+      title: "Home"
+    },
+    {
+      name: "about",
+      url: "/about",
+      title: "About"
+    },
+    {
+      name: "blog-creator",
+      url: "/blogs/creator",
+      title: "New Blog"
+    }
+  ]
+  %>
+  <nav class="navigation">
+    <ul class="navigation-menu">
+      <% links.forEach((link) => { %>
+        <li>
+          <%
+            let className = activeLink === link.name ? "active-link" : ""
+          %>
+          <a href="<%= link.url %>" class="<%= className %>"><%= link.title %></a>
+        </li>
+      <% }) %>
+    </ul>
+  </nav>
+</header>
